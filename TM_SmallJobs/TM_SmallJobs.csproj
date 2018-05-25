@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainFolder\Loggin.aspx" />
+    <Content Include="MainFolder\Main.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="MainFolder\Loggin.aspx.designer.cs">
       <DependentUpon>Loggin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFolder\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

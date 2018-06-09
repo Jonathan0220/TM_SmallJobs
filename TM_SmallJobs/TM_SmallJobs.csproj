@@ -94,10 +94,49 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dashboard.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\signin.css" />
+    <Content Include="css\simple-sidebar.css" />
+    <Content Include="css\style.css" />
+    <Content Include="images\31914020_256442941566228_5771099761239130112_n.jpg" />
+    <Content Include="images\440727-best-no-game-no-life-wallpapers-1920x1200-laptop.jpg" />
+    <Content Include="images\e5c9a20a-901f-4f6a-a1bc-a1c505bd56e6.jpg" />
+    <Content Include="jquery\jquery.place.js" />
+    <Content Include="jquery\jquery.min.js" />
+    <Content Include="js\affix.js" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Chart.min.js" />
+    <Content Include="js\jquery-3.3.1.slim.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquerybot.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="MainFolder\Publicar.aspx" />
+    <Content Include="MainFolder\userGeneral.aspx" />
+    <Content Include="MainFolder\voluntario.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -127,8 +166,30 @@
     <Compile Include="MainFolder\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MainFolder\Publicar.aspx.cs">
+      <DependentUpon>Publicar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFolder\Publicar.aspx.designer.cs">
+      <DependentUpon>Publicar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\userGeneral.aspx.cs">
+      <DependentUpon>userGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFolder\userGeneral.aspx.designer.cs">
+      <DependentUpon>userGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\voluntario.aspx.cs">
+      <DependentUpon>voluntario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFolder\voluntario.aspx.designer.cs">
+      <DependentUpon>voluntario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

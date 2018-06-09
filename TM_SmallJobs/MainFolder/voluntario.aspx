@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="TM_SmallJobs.MainFolder.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="voluntario.aspx.cs" Inherits="TM_SmallJobs.MainFolder.voluntario" %>
 
 <!DOCTYPE html>
 
@@ -92,7 +92,7 @@
         transform: rotate(-44deg);
     }
 </style>
-    <title>Small Jobs</title>
+    <title>Voluntario</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
@@ -145,90 +145,43 @@
                     </li>
                 </ul>
             </div>
-            <!--/col-->
-
             <div class="col main pt-5 mt-3">
-                <h1 class="display-4 d-none d-sm-block">Registro
-                </h1>
-                <hr/>
                 <div class="container">
-                  <form class="form-horizontal" runat="server" action="#">
-                    <h2 class="sub-header mt-5">Usuario General</h2>
-                    <br />
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="Nombre">Nombre:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="Text" class="form-control" id="Nombre" placeholder="Ingrese Nombre" name="Nombre"/>
-                      </div>
-                    </div>
-                      <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="Apellido">Apellido:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido" name="apellido"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="edad">Edad:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="edad" placeholder="Ingrese Edad" name="edad"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="email">Email:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="email" class="form-control" id="email" placeholder="Ingrese email" name="email"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="pwd">Password:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="password" class="form-control" id="pwd" placeholder="Ingrese password" name="pwd"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="Telefono">Telefono:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="telefono" placeholder="Ingrese Telefono" name="edad"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="residencia">Residencia:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="residencia" placeholder="Ingrese Lugar de residencia" name="residencia"/>
-                      </div>
-                    </div>
-                    <!--<div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                          <label><input type="checkbox" name="remember"> Remember me</label>
+                    <form>
+                      <div class="form-row">
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" placeholder="Buscar"/>
+                        </div>
+                        <div class="col-auto">
+                          <button type="submit" class="btn btn-primary mb-2">Buscar</button>
                         </div>
                       </div>
-                    </div>-->
-                    <div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <asp:Button runat="server" type="submit" class="btn btn-success" Text="Submit"/>
-                      </div>
-                    </div>
-                  </form>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-
-              </div>
+                    </form>
+                </div>
                 <hr/>
-              <footer class="container-fluid">
-                  <p class="text small">©2016-2018 Company</p>
+                <div class="container">
+                    <div class="jumbotron">
+                      <h1 class="display-8">Proteccion civil voluntario</h1>
+                      <p class="lead">Quieres ayudar a tu comunidad te estamos esperando ven con nosotros el equipo de proteccion civil te espera.</p>
+                      <hr class="my-4">
+                      <p>Se realizaran trabajos de supervicion de areas turisticas, previamente tomado un curso de primeros auxilios otorgado gratuitamente para el voluntario</p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </div>
+                    <div class="jumbotron">
+                      <h1 class="display-8">Proteccion civil voluntario</h1>
+                      <p class="lead">Quieres ayudar a tu comunidad te estamos esperando ven con nosotros el equipo de proteccion civil te espera.</p>
+                      <hr class="my-4">
+                      <p>Se realizaran trabajos de supervicion de areas turisticas, previamente tomado un curso de primeros auxilios otorgado gratuitamente para el voluntario</p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </div>
+                </div>
+                <hr />
+                <footer class="container-fluid">
+                  <p class="text-center small">©2016-2018 Company</p>
               </footer>
-              
             </div>
-            <!--/main col-->
-
-        </div>
+            </div>
     </div>
-
-
     <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;

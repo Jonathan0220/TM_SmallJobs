@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="TM_SmallJobs.MainFolder.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Publicar.aspx.cs" Inherits="TM_SmallJobs.MainFolder.Publicar" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="../images/31914020_256442941566228_5771099761239130112_n.jpg"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/font-awesome.min.css" />
-    <style type="text/css">body, html {
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200' rel='stylesheet' type='text/css'/>
+    <style type="text/css">
+        body, html {
       height:100%;
     }
 
@@ -92,9 +94,9 @@
         transform: rotate(-44deg);
     }
 </style>
-    <title>Small Jobs</title>
+    <title></title>
 </head>
-<body>
+<body onload="initialize()">
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
     <div class="flex-row d-flex">
         <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
@@ -145,90 +147,63 @@
                     </li>
                 </ul>
             </div>
-            <!--/col-->
-
             <div class="col main pt-5 mt-3">
-                <h1 class="display-4 d-none d-sm-block">Registro
-                </h1>
-                <hr/>
                 <div class="container">
-                  <form class="form-horizontal" runat="server" action="#">
-                    <h2 class="sub-header mt-5">Usuario General</h2>
-                    <br />
+                     <h1 class="display-4 d-none d-sm-block">Publicar vacante</h1>
+                    <hr />
+                </div>
+                <div class="container">
+                    <form class="form-horizontal" runat="server" action="#">
                     <div class="form-group">
                       <asp:Label runat="server" class="control-label col-sm-2" for="Nombre">Nombre:</asp:Label>
                       <div class="col-sm-8">
                         <asp:TextBox runat="server" type="Text" class="form-control" id="Nombre" placeholder="Ingrese Nombre" name="Nombre"/>
                       </div>
                     </div>
-                      <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="Apellido">Apellido:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido" name="apellido"/>
-                      </div>
-                    </div>
                     <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="edad">Edad:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="edad" placeholder="Ingrese Edad" name="edad"/>
+                        <div class="col-sm-8">
+                            <label for="categoria">Seleccione categoria</label>
+                        <select class="form-control" id="categoria">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                            </div>
                       </div>
-                    </div>
                     <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="email">Email:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="email" class="form-control" id="email" placeholder="Ingrese email" name="email"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="pwd">Password:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="password" class="form-control" id="pwd" placeholder="Ingrese password" name="pwd"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="Telefono">Telefono:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="telefono" placeholder="Ingrese Telefono" name="edad"/>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <asp:Label runat="server" class="control-label col-sm-2" for="residencia">Residencia:</asp:Label>
-                      <div class="col-sm-8">
-                        <asp:TextBox runat="server" type="number" class="form-control" id="residencia" placeholder="Ingrese Lugar de residencia" name="residencia"/>
-                      </div>
-                    </div>
-                    <!--<div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                          <label><input type="checkbox" name="remember"> Remember me</label>
+                        <div class="col-sm-8">
+                        <label for="descripcion">Descripcion del trabajo</label>
+                            <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripcion del trabajo"></textarea>
                         </div>
+                    </div>
+                    <div class="form-group">
+					  <label for="autocomplete" class="col-sm-2 control-label">Dirección</label>
+					   <div class="col-sm-8">
+					     <asp:TextBox runat="server" class="form-control" id="autocomplete" placeholder="Ingrese su dirección" onFocus="geolocate()" type="text"></asp:TextBox>
+					   </div>
+					</div>
+                    <div class="form-group">
+                      <asp:Label runat="server" class="control-label col-sm-2" for="precio">Precio:</asp:Label>
+                      <div class="col-sm-8">
+                        <asp:TextBox runat="server" type="Text" class="form-control" id="precio" placeholder="Ingrese precio" name="Nombre"/>
                       </div>
-                    </div>-->
+                    </div>
                     <div class="form-group">
                       <div class="col-sm-offset-2 col-sm-10">
                         <asp:Button runat="server" type="submit" class="btn btn-success" Text="Submit"/>
                       </div>
                     </div>
                   </form>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-
-              </div>
-                <hr/>
-              <footer class="container-fluid">
-                  <p class="text small">©2016-2018 Company</p>
+                </div>
+                <hr />
+                <footer class="container-fluid">
+                  <p class="text-center small">©2016-2018 Company</p>
               </footer>
-              
             </div>
-            <!--/main col-->
-
-        </div>
+            </div>
     </div>
-
-
     <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;
@@ -266,7 +241,9 @@
     }, false);
   </script>
     <!--scripts loaded here-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     <script src="../jquery/jquery.min.js"></script>
+    <script src="../jquery/jquery.place.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/affix.js"></script>

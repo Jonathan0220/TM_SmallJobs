@@ -123,6 +123,7 @@
     <Content Include="MainFolder\Publicar.aspx" />
     <Content Include="MainFolder\userGeneral.aspx" />
     <Content Include="MainFolder\voluntario.aspx" />
+    <Content Include="MainFolder\WebForm1.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="MainFolder\voluntario.aspx.designer.cs">
       <DependentUpon>voluntario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainFolder\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainFolder\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
